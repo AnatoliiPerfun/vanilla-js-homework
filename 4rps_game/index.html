@@ -15,9 +15,7 @@
       </div>
       <!-- player -->
       <div class="player-container" id="player">
-         <h2>You - <span id="playerScore">0</span>
-            <span class="choice" id="playerChoice"> --- Choice</span>
-         </h2>
+         <h2>You - <span id="playerScore"></span><span class="choice" id="playerChoice"></span></h2>
          <i class="far fa-hand-rock" title="Rock" id="playerRock" onclick="select('rock')"></i>
          <i class="far fa-hand-paper" title="Paper" id="playerPaper" onclick="select('paper')"></i>
          <i class="far fa-hand-scissors" title="Scissors" id="playerScissors" onclick="select('scissors')"></i>
@@ -26,21 +24,19 @@
       </div>
       <!-- computer -->
       <div class="player-container" id="ai">
-         <h2>AI - <span id="aiScore">0</span>
-            <span class="choice" id="aiChoice"> --- Choice</span>
-         </h2>
+         <h2>ai - <span id="aiScore"></span><span class="choice" id="aiChoice"></span></h2>
          <i class="far fa-hand-rock" title="Rock" id="aiRock"></i>
-         <i class="far fa-hand-paper" title="Parer" id="aiParer"></i>
+         <i class="far fa-hand-paper" title="Paper" id="aiPaper"></i>
          <i class="far fa-hand-scissors" title="Scissors" id="aiScissors"></i>
          <i class="far fa-hand-lizard" title="Lizard" id="aiLizard"></i>
          <i class="far fa-hand-spock" title="Spock" id="aiSpock"></i>
-      </div>
+     </div>
       <!-- reset -->
-      <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+      <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
       <div class="result-container">
-         <h3 class="result-text" id="resultText">the winner!</h3>
+         <h3 class="result-text" id="resultText"></h3>
       </div>
    </div>
-   <script src="script.js"></script>
+   <script src="script.js" type="module"></script>
 </body>
 </html>
