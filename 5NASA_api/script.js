@@ -92,9 +92,9 @@ async function getNasaPictures() {
    try {
       const response = await fetch(apiUrl);
       resultsArray = await response.json();
-      updateDOM('favorites');
+      updateDOM('results');
    } catch (error) {
-      console.log(error);
+
    }
 }
 
@@ -104,7 +104,7 @@ function saveFavorite(itemUrl) {
       if (item.url.includes(itemUrl) && !favorites[itemUrl]) {
          favorites[itemUrl] = item;
          saveConfirmed.hidden = false;
-         setTimeout(() =>{
+         setTimeout(() => {
             saveConfirmed.hidden = true;
          }, 2000);
          //set fav in local storage
