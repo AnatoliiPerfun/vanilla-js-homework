@@ -7,13 +7,15 @@ const rateEl = document.getElementById('rate');
 const swap = document.getElementById('swap');
 
 function caclulate() {
+//   fetch('items.json')
+//     .then(res =>  res.json())
+//     .then(data => console.log(data));
   const currency_one = currencyEl_one.value;
   const currency_two = currencyEl_two.value;
 
   fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
     .then(res => res.json())
     .then(data => {
-      // console.log(data);
       const rate = data.rates[currency_two];
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
@@ -35,13 +37,3 @@ swap.addEventListener('click', () => {
 });
 
 caclulate();
-
-
-
-// function caclulate() {
-//   fetch('items.json')
-//     .then(res =>  res.json())
-//     .then(data => console.log(data));
-// }
-
-// caclulate();
